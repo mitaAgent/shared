@@ -10,6 +10,8 @@ Regime 独立模块 — SSOT (Single Source of Truth)
 """
 from .classifier import compute_timeline, compute_timeline_from_df, classify_current
 from .classifier_v3 import compute_v3_timeline, compute_v3_timeline_from_mongo
+from .style_signal import compute_style_signal, compute_style_signal_from_mongo
+from .capital_router import compute_allocation
 from .weather import WEATHER_MAP, REGIME_COLORS, get_weather
 from .market_temp import compute_breadth
 from .snapshot import get_market_snapshot
@@ -22,6 +24,11 @@ __all__ = [
     # v3 (策略推荐)
     "compute_v3_timeline",
     "compute_v3_timeline_from_mongo",
+    # 风格轮动
+    "compute_style_signal",
+    "compute_style_signal_from_mongo",
+    # 资本路由
+    "compute_allocation",
     # 辅助
     "WEATHER_MAP",
     "REGIME_COLORS",
